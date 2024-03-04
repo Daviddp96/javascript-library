@@ -83,7 +83,7 @@ main {
 
 .books__section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
 }
 
@@ -227,6 +227,12 @@ main {
   padding: 1rem;
   border-radius: 0.5rem;
   font-size: 1.1rem;
+}
+
+@media screen and (max-width: 450px) {
+    .add-book__modal {
+        width: 95%;
+    }
 }
 
 @media screen and (min-width: 500px) {

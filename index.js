@@ -58,7 +58,7 @@ function addBookToLibrary(title, author, pages, isRead) {
 function createBookElement(book, index) {
     const bookMarkup = `
         <div class="book__data">
-        <h3 class="book__title">${book.title}</h3>
+        <h3 class="book__title">"${book.title}"</h3>
         <p class="book__author">by ${book.author}</p>
         <p class="book__pages"><strong>${book.numPages}</strong> pages</p>
         </div>
