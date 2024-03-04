@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Salsa&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #034748;
+    font-family: sans-serif;
+    min-height: 100vh;
+    position: relative;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 1.2rem;
+}
+
+header {
+    background-color: aliceblue;
+    padding: 0rem 2rem;
+    box-shadow: 0px 8px 12px 2px rgba(0,0,0,0.2);
+}
+
+.header__branding {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.branding__logo {
+    transform: scale(2);
+    fill: #034748;
+}
+
+.branding__text {
+    font-family: 'Salsa', cursive;
+    color: #4bab85;
+    font-size: 2.5rem;
+}
+
+.branding__text span {
+    color: #034748;
+}
+
+main {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.action-btn {
+    border: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 1rem 1.5rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+}
+
+.action-btn:active {
+    transform: translateY(0px);
+}
+
+
+.add-btn {
+    margin: 2rem 0;
+    background: #FFE342;
+    color: black;
+    font-size: 1.7rem;
+}
+
+.books__section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.book {
+    background-color: aliceblue;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    box-shadow: 0px 8px 12px 2px rgba(0,0,0,0.3);
+}
+
+.book__title {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.book__author {
+    color: hsl(0, 0%, 35%);
+    padding-bottom: 1rem;
+    align-self: center;
+}
+
+.book__pages {
+    font-size: 1.25rem;
+}
+
+.book__data,
+.book__actions {
+    display: flex;
+    flex-direction: column;
+}
+
+.book__data {
+    gap: 0.5rem;
+}
+
+.book__actions {
+    gap: 1.2rem;
+}
+
+.action-btn {
+    align-self: center;
+    padding: 1rem;
+    width: 300px;
+}
+
+.attribution {
+    text-align: center;
+    color: white;
+    padding: 3rem 0;
+}
+
+.attribution a {
+    display: inline-block;
+    text-decoration: none;
+    color: gold;
+    transition: all 0.4s;
+}
+
+.attribution a:hover,
+.attribution a:active {
+    transform: scale(1.2);
+}
+
+.read-btn,
+.remove-btn {
+    font-size: 1.3rem;
+}
+
+.read-btn {
+    background-color: #dce2e2;
+}
+
+.remove-btn {
+    background-color: rgb(255, 131, 126);
+}
+
+.modal__overlay {
+    background: black;
+    opacity: 0.45;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: none;
+}
+
+.add-book__modal {
+    position: absolute;
+    background-color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: none;
+}
