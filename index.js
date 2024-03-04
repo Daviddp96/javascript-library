@@ -63,7 +63,7 @@ function createBookElement(book, index) {
         <p class="book__pages"><strong>${book.numPages}</strong> pages</p>
         </div>
         <div class="book__actions">
-        <button class="action-btn read-btn">${book.isRead ? 'Completed' : 'Not read'}</button>
+        <button class="action-btn read-btn" data-book-index=${index}>${book.isRead ? 'Completed' : 'Not read'}</button>
         <button class="action-btn remove-btn" data-book-index="${index}">Remove</button>
         </div>
     `;
@@ -84,6 +84,12 @@ function handleBookActions(event) {
     if (event.target.classList.contains('remove-btn')) {
       const bookIndex = event.target.dataset.bookIndex;
       removeBookFromLibrary(bookIndex);
+    }
+    if (event.target.classList.contains('read-btn')) {
+        const button = event.target;
+        const bookIndex = event.target.dataset.bookIndex;
+        myLibrary[bookIndex].isRead = !myLibrary[bookIndex].isRead;
+        button.innerText = myLibrary[bookIndex].isRead ? 'Completed' : 'Not read';
     }
 }
 
