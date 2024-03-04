@@ -109,6 +109,14 @@ function hideModal() {
 }
 
 function showModal() {
+    cleanInputs();
     modal.style.display = 'block';
     modalOverlay.style.display = 'block';
+}
+
+function cleanInputs() {
+    titleInput.value = '';
+    authorInput.value = '';
+    pagesInput.value = '';
+    readInput.value = '';
 }
