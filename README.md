@@ -18,4 +18,4 @@ This webpage is a simple book library made to practice working with Object const
 ## Challenges and Future Improvements
 - Adding local storage.
 - Animations.
-
+- Validation to avoid having the same book twice.
