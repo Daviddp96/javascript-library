@@ -18,15 +18,22 @@ const bookForm = document.getElementById('add-book-form');
 const titleInput = document.getElementById('add-book-title');
 const authorInput = document.getElementById('add-book-author');
 const pagesInput = document.getElementById('add-book-pages');
-const readInput = document.getElementById('add-book-read');
+const readInput = document.querySelector('.add-book-read');
 const submitBtn = document.getElementById('submit-book');
 
-// Books grid
+// Books grid & add book btn
+const addBookBtn = document.getElementById('add-book');
 const booksGrid = document.querySelector('.books__section');
+
+// Modal
+const modalOverlay = document.querySelector('.modal__overlay');
+const modal = document.querySelector('.add-book__modal');
 
 // Event listeners
 bookForm.addEventListener('submit', submitBook);
 booksGrid.addEventListener('click', handleBookActions);
+modalOverlay.addEventListener('click', hideModal);
+addBookBtn.addEventListener('click', showModal);
 
 // Functions
 function submitBook(event) {
@@ -38,6 +45,7 @@ function submitBook(event) {
     const bookRead = readInput.checked;
 
     addBookToLibrary(bookTitle, bookAuthor, bookPages, bookRead);
+    hideModal();
     resetGrid();
     displayBooks(myLibrary);
 }
@@ -89,3 +97,12 @@ function resetGrid() {
     booksGrid.innerHTML = '';
 }
 
+function hideModal() {
+    modal.style.display = 'none';
+    modalOverlay.style.display = 'none';
+}
+
+function showModal() {
+    modal.style.display = 'block';
+    modalOverlay.style.display = 'block';
+}

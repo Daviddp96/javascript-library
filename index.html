@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>JavaScript Library</title>
 </head>
@@ -10,7 +11,7 @@
     <div class="modal__overlay"></div>
     <div class="add-book__modal">
         <form action="submit" class="add-book__form" id="add-book-form">
-            <h2>What book would you like to add?</h2>
+            <h2>Add a new book!</h2>
             <div class="input__group">
                 <input type="text" required placeholder="Title" maxlength="100" id="add-book-title">
             </div>
@@ -21,8 +22,13 @@
                 <input type="number" min="1" max="30000" required placeholder="Number of pages" id="add-book-pages">
             </div>
             <div class="checkbox__group">
-                <label for="add-book-read">Have you finished this book?</label>
-                <input type="checkbox" name="" id="add-book-read">
+                <label for="add-book-read">Did you read this book?</label>
+                <div class="checkbox-wrapper-22">
+                    <label class="switch" for="checkbox">
+                      <input type="checkbox" id="checkbox" class="add-book-read" />
+                      <div class="slider round"></div>
+                    </label>
+                  </div>
             </div>
             <button type="submit" id="submit-book">Submit</button>
         </form>
@@ -36,61 +42,6 @@
     <main class="container">
         <button class="add-btn action-btn" id="add-book">Add book</button>
         <section class="books__section">
-            <article class="book">
-                <div class="book__data">
-                    <h3 class="book__title">"<span>K</span>"</h3>
-                    <p class="book__author">by D.p.d</p>
-                    <p class="book__pages"><strong>123</strong> pages</p>
-                </div>
-                <div class="book__actions">
-                    <button class="action-btn read-btn">Not read</button>
-                    <button class="action-btn remove-btn">Remove</button>
-                </div>
-            </article>
-            <article class="book">
-                <div class="book__data">
-                    <h3 class="book__title">"<span>K</span>"</h3>
-                    <p class="book__author">by D.p.d</p>
-                    <p class="book__pages"><strong>123</strong> pages</p>
-                </div>
-                <div class="book__actions">
-                    <button class="action-btn read-btn">Not read</button>
-                    <button class="action-btn remove-btn">Remove</button>
-                </div>
-            </article>
-            <article class="book">
-                <div class="book__data">
-                    <h3 class="book__title">"<span>K</span>"</h3>
-                    <p class="book__author">by D.p.d</p>
-                    <p class="book__pages"><strong>123</strong> pages</p>
-                </div>
-                <div class="book__actions">
-                    <button class="action-btn read-btn">Not read</button>
-                    <button class="action-btn remove-btn">Remove</button>
-                </div>
-            </article>
-            <article class="book">
-                <div class="book__data">
-                    <h3 class="book__title">"<span>K</span>"</h3>
-                    <p class="book__author">by D.p.d</p>
-                    <p class="book__pages"><strong>123</strong> pages</p>
-                </div>
-                <div class="book__actions">
-                    <button class="action-btn read-btn">Not read</button>
-                    <button class="action-btn remove-btn">Remove</button>
-                </div>
-            </article>
-            <article class="book">
-                <div class="book__data">
-                    <h3 class="book__title">"<span>K</span>"</h3>
-                    <p class="book__author">by D.p.d</p>
-                    <p class="book__pages"><strong>123</strong> pages</p>
-                </div>
-                <div class="book__actions">
-                    <button class="action-btn read-btn">Not read</button>
-                    <button class="action-btn remove-btn">Remove</button>
-                </div>
-            </article>
         </section>
     </main>
     <footer>
