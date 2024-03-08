@@ -1,15 +1,17 @@
 const myLibrary = [];
 
-function Book(title, author, numPages, isRead) {
-    this.title = title;
-    this.author = author;
-    this.numPages = numPages;
-    this.isRead = isRead;
-    
-    this.info = function() {
-        const infoString = `${this.title} by ${this.author}, ${this.numPages} pages, ${isRead ? `has been read` : `not read yet`}`;
-        console.log(infoString);
-        return infoString;
+class Book {
+    constructor(title, author, numPages, isRead) {
+        this.title = title;
+        this.author = author;
+        this.numPages = numPages;
+        this.isRead = isRead;
+
+        this.info = function () {
+            const infoString = `${this.title} by ${this.author}, ${this.numPages} pages, ${isRead ? `has been read` : `not read yet`}`;
+            console.log(infoString);
+            return infoString;
+        };
     }
 }
 
